@@ -1,0 +1,37 @@
+Question 8, Conv2D also learns how to best combine all input channels, so it is actually a 3D convolution
+
+
+
+Question 17, 128 channels (= number of filters)
+
+
+
+This
+
+
+
+val_generator = datagen.flow(Xval, Yval, batch_size=100,subset='validation')
+
+
+
+should be
+
+
+
+val_generator = datagen.flow(Xtrain, Ytrain, batch_size=100,subset='validation')
+
+
+
+as the generator keeps track of its own validation data
+
+
+
+Question 24, yes flow_from_directory
+
+
+
+Question 28, yes as in fully convolutional CNNs
+
+
+
+ 

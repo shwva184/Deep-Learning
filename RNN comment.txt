@@ -1,0 +1,21 @@
+This
+
+
+
+word_to_index =  build_index(words, init=['<unk>'])
+
+tag_to_index = build_index(tags)
+
+
+
+should be
+
+
+
+word_to_index = build_index(words, init=['<pad>', '<unk>'])
+
+tag_to_index = build_index(tags, init=['<pad>'])
+
+
+
+which will reduce test accuracy to about 90%
